@@ -27,6 +27,12 @@
     "isNew": {
       "type": "boolean",
       "default": true
+    },
+    "genres": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::genre.genre",
+      "inversedBy": "books"
     }
   }
 }

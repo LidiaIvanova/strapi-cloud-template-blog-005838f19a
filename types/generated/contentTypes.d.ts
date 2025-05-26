@@ -445,6 +445,7 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    genres: Schema.Attribute.Relation<'manyToMany', 'api::genre.genre'>;
     isNew: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::book.book'> &
@@ -533,6 +534,7 @@ export interface ApiGenreGenre extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    books: Schema.Attribute.Relation<'manyToMany', 'api::book.book'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
