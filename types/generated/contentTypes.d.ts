@@ -492,6 +492,7 @@ export interface ApiChapterChapter extends Struct.CollectionTypeSchema {
 export interface ApiFavoriteFavorite extends Struct.CollectionTypeSchema {
   collectionName: 'favorites';
   info: {
+    description: '';
     displayName: 'Favorite';
     pluralName: 'favorites';
     singularName: 'favorite';
@@ -500,7 +501,7 @@ export interface ApiFavoriteFavorite extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    book: Schema.Attribute.Relation<'oneToOne', 'api::book.book'>;
+    bookId: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -592,7 +593,7 @@ export interface ApiProgressProgress extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    chapter: Schema.Attribute.Relation<'oneToOne', 'api::chapter.chapter'>;
+    chapterId: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -625,6 +626,7 @@ export interface ApiProgressProgress extends Struct.CollectionTypeSchema {
 export interface ApiQuoteQuote extends Struct.CollectionTypeSchema {
   collectionName: 'quotes';
   info: {
+    description: '';
     displayName: 'Quote';
     pluralName: 'quotes';
     singularName: 'quote';
@@ -633,7 +635,7 @@ export interface ApiQuoteQuote extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    book: Schema.Attribute.Relation<'oneToOne', 'api::book.book'>;
+    bookId: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

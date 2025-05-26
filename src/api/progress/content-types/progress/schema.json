@@ -23,10 +23,8 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "progress"
     },
-    "chapter": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::chapter.chapter"
+    "chapterId": {
+      "type": "integer"
     }
   }
 }
