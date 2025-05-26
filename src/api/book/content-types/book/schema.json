@@ -11,10 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "uid": {
-      "type": "uid",
-      "required": false
-    },
     "title": {
       "type": "string",
       "required": true
@@ -27,6 +23,10 @@
     },
     "coverURL": {
       "type": "string"
+    },
+    "isNew": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
