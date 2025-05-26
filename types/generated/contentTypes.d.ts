@@ -446,6 +446,7 @@ export interface ApiBookBook extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     genres: Schema.Attribute.Relation<'manyToMany', 'api::genre.genre'>;
+    illustrationURL: Schema.Attribute.String;
     isNew: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::book.book'> &
