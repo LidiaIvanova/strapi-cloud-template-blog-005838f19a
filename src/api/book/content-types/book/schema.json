@@ -36,6 +36,9 @@
     },
     "illustrationURL": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

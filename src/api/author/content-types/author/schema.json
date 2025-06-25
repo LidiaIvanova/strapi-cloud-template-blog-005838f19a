@@ -20,6 +20,9 @@
       "relation": "manyToMany",
       "target": "api::book.book",
       "inversedBy": "authors"
+    },
+    "avatarURL": {
+      "type": "string"
     }
   }
 }
